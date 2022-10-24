@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+    <script type="module">
+        import "./src/mvu.js"
+
+        const {
+            dom,  // ~<=> <div>
+            udom, // ~<=> </div> 
+            m,
+            html,   // ~<=> document.createElement
+            render, // ~<=> append
+        } = MVU;
+
+        const h1 = m("h1");
+        const div = m("div");
+        const input = m("input")
+
+        let state = {
+            counter: 0,
+            name: "guests"
+        }
+
+        state.get = function (prop) {
+            let _state = state
+            return _state[prop]
+        }
+
+        state.set = function (patch) {
+            let _state = state;
+            state = { ..._state, ...patch };
+        }
+
+        function App(state) {
+            const s = state;
+            let view = dom()
+                input("", { value: "hy..." })
+                h1(`Name : ${s.name}`)
+                h1(`Value :  ${s.counter}`)
+                h1(`Value :  ${s.counter + 1000}`)
+                html(`
+                    <h1>TEST</h1>
+                `)
+            udom()
+            return view;
+        }
+
+        function update_view () {
+            render(app, App(state))
+        }
+        
+        setInterval(() => {
+            state.set({ counter: state.counter += 1 })
+            update_view()
+        }, 300)
+
+        update_view()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "mvu",
+  "version": "1.1.0",
+  "description": "mvu",
+
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/mvu.umd.js",
+  "module": "./dist/norav.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mvu.es.js",
+      "require": "./dist/mvu.js"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^3.0.4"
+  },
+  "dependencies": {
+    "morphdom": "^2.6.1"
+  }
+}
