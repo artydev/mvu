@@ -244,6 +244,7 @@ function html(html) {
   template.innerHTML = html;
   const elt = template.content.firstChild
   appendBase(elt);
+  return elt
 }
 
 
