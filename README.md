@@ -4,7 +4,7 @@ Based on [DML](https://github.com/efpage/DML) and [Morphdom](https://github.com/
 
 # Caution
 
-I have rebased MVU to 1.1.0 version and removed the Observable library. 
+I have rebased MVU to 1.1.1 version and removed the Observable library. 
 
 
 
