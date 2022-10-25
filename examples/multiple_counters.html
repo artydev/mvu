@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Counters</title>
+    <script src="../dist/mvu.umd.js"></script>
+</head>
+
+<body>
+    <div id="app"> </div>
+    <script>
+        const { dom, udom, m, html, render } = MVU;
+
+        const num_counters = 10;
+
+        const State = {
+            counters: [...Array(num_counters)].map(() => 0)
+        }
+
+        const h1 = m('h1');
+
+        const Counter = (index = 0) => {
+            let view = dom();
+            let counter = html(`
+                <div>
+                    <h2>Counter (${index}) : ${State.counters[index]}</h2>
+                    <button>INC</button>
+                </div>
+            `);
+            udom();
+
+            let incBtn = counter.querySelector('button');
+
+            incBtn.onclick = () => {
+                State.counters[index]++;
+                console.log(State.counters);
+                render(app, App(State))
+            };
+            return view;
+        };
+
+
+        function App(State) {
+            const app = dom()
+                { [...Array(num_counters)].map((_,i) => Counter(i)) }
+            udom()
+            return app
+        }
+
+        render(app, App(State));
+
+    </script>
+</body>
+
+</html>

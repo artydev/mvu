@@ -2,9 +2,7 @@
 
 Based on [DML](https://github.com/efpage/DML) and [Morphdom](https://github.com/patrick-steele-idem/morphdom)
 
-# Caution
-
-I have rebased MVU to 1.1.1 version and removed the Observable library. 
+[![](https://data.jsdelivr.com/v1/package/gh/artydev/mvu/badge)](https://www.jsdelivr.com/package/gh/artydev/mvu)
 
 
 

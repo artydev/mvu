@@ -15,58 +15,40 @@
     </div>
     <script type="module">
         import "./src/mvu.ts"
+        const { dom, udom, m, html, render } = MVU;
 
-        const {
-            dom,  // ~<=> <div>
-            udom, // ~<=> </div> 
-            m,
-            html,   // ~<=> document.createElement
-            render, // ~<=> append
-        } = MVU;
+const num_counters = 10;
 
-        const h1 = m("h1");
-        const div = m("div");
-        const input = m("input")
+const State = {
+    counters: [...Array(num_counters)].map(() => 0)
+}
 
-        let state = {
-            counter: 0,
-            name: "guests"
-        }
+const div = m('div');
+const h1 = m('h1');
+const input = m('input');
 
-        state.get = function (prop) {
-            let _state = state
-            return _state[prop]
-        }
+const Counter = (index = 0) => {
+    let view = dom();
+    let counter = html(`
+    <div>
+    <h2>Counter (${index})</h2>
+    <button>INC</button>
+    </div>
+`);
+    udom();
+    
+    let incBtn = counter.querySelector('button');
+    incBtn.onclick = () => {
+        State.counters[index]++;
+        console.log(State.counters);
+        render(app, Counter())
+    };
+    return view;
+};
 
-        state.set = function (patch) {
-            let _state = state;
-            state = { ..._state, ...patch };
-        }
 
-        function App(state) {
-            const s = state;
-            let view = dom()
-                input("", { value: "hy..." })
-                h1(`Name : ${s.name}`)
-                h1(`Value :  ${s.counter}`)
-                h1(`Value :  ${s.counter + 1000}`)
-                let h = html(`
-                    <h1>TEST IT</h1>
-                `)
-            udom()
-            return view;
-        }
 
-        function update_view () {
-            render(app, App(state))
-        }
-        
-        setInterval(() => {
-            state.set({ counter: state.counter += 1 })
-            update_view()
-        }, 300)
-
-        update_view()
+render(app, Counter())
     </script>
 </body>
 
