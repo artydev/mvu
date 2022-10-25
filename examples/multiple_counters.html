@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div id="app"> </div>
+    <div id="app" style="background-color: rgb(227, 227, 200);"> </div>
     <script>
         const { dom, udom, m, html, render } = MVU;
 
@@ -21,36 +21,31 @@
         }
 
         const h1 = m('h1');
+        const h2 = m("h2");
+        const btn = m("button");
 
         const Counter = (index = 0) => {
-            let view = dom();
-            let counter = html(`
-                <div>
-                    <h2>Counter (${index}) : ${State.counters[index]}</h2>
-                    <button>INC</button>
-                </div>
-            `);
-            udom();
-
-            let incBtn = counter.querySelector('button');
-
-            incBtn.onclick = () => {
+            const counter = dom()
+            h2(`Counter (${index}) - Value : ${State.counters[index]}`)
+            btn("INC").onclick = () => {
                 State.counters[index]++;
-                console.log(State.counters);
-                render(app, App(State))
+                update_view();
             };
-            return view;
+            udom()
         };
-
 
         function App(State) {
             const app = dom()
-                { [...Array(num_counters)].map((_,i) => Counter(i)) }
+            { [...Array(num_counters)].map((_, index) => Counter(index)) }
             udom()
             return app
         }
 
-        render(app, App(State));
+        function update_view() {
+            render(app, App(State));
+        }
+
+        update_view();
 
     </script>
 </body>
