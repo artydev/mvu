@@ -7,7 +7,7 @@ La grande différence avec ces librairies est le fait que MVU peut être utilis�
 
 Le projet est hébergée sur Github  : [MVU](https://github.com/artydev/mvu)
 
-## Fonctions exposées par MVU
+# Fonctions exposées par MVU
 
 Elles sont au nombre de cinq.
 
