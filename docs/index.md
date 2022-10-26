@@ -164,6 +164,79 @@ Le code suivant permet de se faire une idée plus précise.
 
 Vous pouvez tester l'exemple ici : [Liste](https://flems.io/#0=N4IgtglgJlA2CmIBcBmA7AOjQNgDQgGd4EBjAF3imRAwAsyxYR8CSAnAe1iaQG0AGXPwC6+AGYQEBZL1AA7AIZhESGvUbMQJDnIq7qAAgA8rNhAAOZAwTYkAvAB0Q9MuYJIA9B5JQ5GAFYEUMQQAG5sGHLwZB4A5rQeCmxkAJ7BoR5goQCuAAIAjBiFAEweUBAEMVnZGNlgUBiQfoFOAHxGHqYWZK0Ocn0GAwMm7N29coMTBtpylQZkAB5kAPq08ArBbAZ2gyAAogvwYOYIBsHTbACXCmQQOmfwBrAVFE4DkwYGYtly5HcTFEqAAoIBQwABKAzAd6fNYbeARCByKJsAAq8CW2wMAAMACTARYrOGbAC+BgAtAZQUdps8SABrSgGJAGfHUsAk7HvElDKYzObAdSwXBnDhgEXZKBikVgAxkrEAWQAagBVADc73e-KstBQWLAQKcuqc4M1UwQOvWmyxuqBhNWVoRpqmWp0c2ysAI+sNIA9Jr6rtmVmeXp2Bqcz39-XN0SeL0eO14GGTAEE2GwFCkgfl+LnwcJGgpzECgctcBBIXZWjiAJJg5ms4AQAwAagM+U5zveFoMHqxHoIQK7Uy8BnuUEuEjkEEefe0YGUBgARgoiA8DBmyGQFCQ1spdAYFNkFgYAOTPU8XS7wL0esiXMzwbJsI7wXTvKUGj3Oz6fEMUQti3ZbZq2AT4YV-HtYCxEMQTBXBgB0Eg6XpJBsUBMggTZMESXBbFcJhCCCKmSUxSHAMXQmDouksVpNCIUhbjdahimKJBsH4EASQQkBFGUagAmkfAZj0MhqC4ni+JUGgSAIIStB0UTqD7aEphXBlYk4H4oCQZ54jITT4DfDUpgAd2gMhaFQYp+HMBYTM+cwNnKORYiQGy7Icgw1ggfSWQAFlzTz3g4UIETEWAOFMpAjzIDgvP-clKhSBAWTkHR4D6Hlo2eKEKPeJyYCRNyDBQYK5GyijniQWhQoRPK1J3elNI4bSWTYWIVyBQQeqEDBinBLySGfAgODYFlzA4JEKDYEySXo4h4D+ZjVHyfIkE4klRF4pRpO+X4mImIUuKAA)
 
+# La fonction __render__
+
+Cette fonction prend deux paramètres :
+
+    - un élément du DOM permettant de rattacher le composant passé en deuxième paramètre
+    - le composant à rattacher à l'élément passer en premier paramètre.
+    
+Le principal intérêt de cette fonction est de ne pas avoir recours à la fonction **innerHTML** lorsque l'on doit raffrachir une large portion d'un document, contenant par exemple des formulaires.
+
+Si l'on utilise **innerHTML**, on recrée complètement la vue, en perdant les évènement associès aux divers éléments ainsi que le focus dans les éléments **input**.
+
+L'idée est donc de ne modifier que les parties concernées en laissant les autres parties intactes.
+
+L'outil utilisé est [MorphDOM](https://github.com/patrick-steele-idem/morphdom). 
+
+Cet outil est intégré dans de  nombreuses libraries et dans MVU entre autre
+
+Voici l'utilisation la plus basique : 
+
+        let target = document.getElementById("app");
+        
+        function App () {
+            const app = dom();
+                html("<h1>Bienvenue en MVU</h1>")
+            udom();
+            return app
+        }
+        render(target, App());
+
+Voici un exemple avancé, où l'on affiche 1000 compteurs, que l'on peut modifier individuellement, sans utiliser les fonctions **innerText** ou **innerHTML**
+
+        const num_counters = 1000;
+
+        const State = {
+            counters: [...Array(num_counters)].map(() => 0)
+        }
+
+        const h1 = m('h1');
+        const h2 = m("h2");
+        const btn = m("button");
+
+        const Counter = (index = 0) => {
+            const counter = dom()
+            h2(`Counter (${index}) - Value : ${State.counters[index]}`)
+            btn("INC").onclick = () => {
+                State.counters[index]++;
+                update_view();
+            };
+            udom()
+            counter.style = "display:flex;justify-content:space-between;padding:10px"
+        };
+
+        function App(State) {
+            const app = dom()
+            { [...Array(num_counters)].map((_, index) => Counter(index)) }
+            udom()
+            return app
+        }
+
+        function update_view() {
+            render(app, App(State));
+        }
+
+        update_view();
+
+Vous pouvez tester l'exemple ici : [MultipleCounters](https://flems.io/#0=N4IgtglgJlA2CmIBcBWAzAOgGwoDQgGd4EBjAF3imRAwAsyxYR8CSAnAe1iaQG0AGXAEYhaALr4AZhAQFkvUADsAhmERIa9RsxAkOiigeoACADys2EAA5ljBNiQC8AHRD0yVgkgD03klEUMACsCKGIIADc2DEV4Mm8Ac1pvZTYyAE8wiO8wCIBXAAEhDGKAJm8oCAJ43LyMPLAoDEhAkNcAPlNvC2sydudFAfMMhH7FY2MAYmUrK2NgAYmJ2ngIJNskYwAWfn4rAA8AbkWljgj4NklYDgB3TeU8sg5j8aWb6DJaTbQdg5OAXyG3RG8DGQ0qEWM0BcIBmVg6JyBELB43M7F67WMJz0imq8y0sFwxigHDARLyJLJxipbHgijCbGM-wmjmMAFkAGoAVReExOSyWOLxigaAH09HkDBcCMZWUJdvwXvyBcYhbYAMpkZQUWXzZUqwUcSUUNheYy8DCWgCCbDYynSAAoRWBxUapaaAJRiZozB0Oj2yzH8D36paAwavA1q4y0IS6sAOgDkscTHt5BtV+jxtFK8YdrhzrjToYm0YARmRxqyE64y48noMQMWIxnM7jbABhN0m3UOiD0+D7XXBwN6yOttt4iXu3WU-0llU5h0AAy7xouxgdABJgP2wvt-gGALTGDnKWB5eDGTY7zXa+AYacmgi8PeDsT-Zch8etiuKfMgAAkgAch2RYYPoJCwBAJAANa9gGjiYgsP4ThMd4UI+3bSq+A77GIADUBHpmhAp5FYUD3qKEQQPANz+iRE7-IxrYUqS86oVG2HRNU6QILqriVAQViwPaSBXIOhxBHk1QQJI6RHjihhkEgwnKCQ8BHmWcQ3PAdKHFYygwP2CRIPKfwgAuzEDAukiSuQED6MYVqzA6GHwAGKGkZOthwrO7Hft5wDmpaGA2najrOq666et6YC+g6opEm++yIZia7un2eEegG4beWxCaBaRtJkHkbDjHCVk2Zxxh2YoDlOeRlEUNRtH0Z5C4CrSA5sA6cJEi5VhuVqFA5SxYbVaxFFUTRdEMZNXQ9DY7Q6EQpBkI5uLUFsaBIAAnCA-y4EoqjqDQIQ6EpdJkNQh3HSAKhqNQj4EHI+BXUYGh5LAY4TGW6mwQknCSlASDQesQN6Yo6bvFAnxIFgvxHCchnGYopmlHsyOvCsaz0JsOxY+mZwXFctxIA8TzptB1RHrxCCbIo+jwIiijhgM0FjpNxio5U6PfAcLzsxG0FILQJOMl5xj-XBQNuqDxhsAk-0OoIau4PwGClM2pZlQQHBsJsVgcP2JpC9Vsa4DmVtoL91KpAk-ZIIqKNGXzpku2zq3EPADVbRou0iIdEgPad1B1X7MYMEw-xAA)
+
+Ce document couvre tout ce qu'il y a à savoir sur l'utilsation de la librarie MVU.
+La seule et dernière évolution à venir consiste à intégrer dans MVU le mécanismes de réactivité...
+
+N'hésitez pas à poser toutes les questions que vous voulez, merci pour votre attention
+
+
 
 
 
