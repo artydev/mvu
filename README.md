@@ -5,10 +5,10 @@ Based on [DML](https://github.com/efpage/DML) and [Morphdom](https://github.com/
 [![](https://data.jsdelivr.com/v1/package/gh/artydev/mvu/badge)](https://www.jsdelivr.com/package/gh/artydev/mvu)
 
 MVU tries to follows the Model View Update pattern.
-The idea is to make the View a function of the State only.
+The idea is to make the view a function of the state only.
 
 For now MVU does not use any reactivity. 
-The view must be updated manually. But I will soon intregrate it.
+The view must be updated manually. But It will be soon intregrate.
 
 MVU can be used totally in the browser, and don't use any external framework, it's plain vanilla Javascript.
 Thanks to [DML](https://github.com/efpage/DML).
