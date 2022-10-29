@@ -34,6 +34,8 @@ A [simpleCounter](https://flems.io/#0=N4IgtglgJlA2CmIBcBWAzAOgGwoDQgGd4EBjAF3imR
     <script>
 
         const {dom, udom, m, html, render } = MVU;
+        
+        const target = document.getElementById("app");
 
         let state = {
             counter: 0
@@ -62,7 +64,7 @@ A [simpleCounter](https://flems.io/#0=N4IgtglgJlA2CmIBcBWAzAOgGwoDQgGd4EBjAF3imR
         }
 
         function update_view(state) {
-           render(app, App(state))
+           render(target, App(state))
         }
         
         update_view(state)
