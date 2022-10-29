@@ -4,7 +4,9 @@ Based on [DML](https://github.com/efpage/DML) and [Morphdom](https://github.com/
 
 [![](https://data.jsdelivr.com/v1/package/gh/artydev/mvu/badge)](https://www.jsdelivr.com/package/gh/artydev/mvu)
 
-MVU tries to follows the Model View Update pattern.
+MVU tries to follows the Model View Update pattern. The idea is to make the View a function of the State only.
+For now MVU does not use any reactivity. 
+The View must be updated manually. But I will soon intregrate it. 
 
 Here is an example :
 
@@ -40,6 +42,7 @@ Here is an example :
   update_view(state)
  ```
      
+You can try other demos here : [Examples](https://github.com/artydev/mvu/wiki/MVU-in-practice)
 
 
 
