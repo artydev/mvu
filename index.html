@@ -13,43 +13,7 @@
     <div id="app">
 
     </div>
-    <script type="module">
-        import "./src/mvu.ts"
-        const { dom, udom, m, html, render } = MVU;
-
-const num_counters = 10;
-
-const State = {
-    counters: [...Array(num_counters)].map(() => 0)
-}
-
-const div = m('div');
-const h1 = m('h1');
-const input = m('input');
-
-const Counter = (index = 0) => {
-    let view = dom();
-    let counter = html(`
-    <div>
-    <h2>Counter (${index})</h2>
-    <button>INC</button>
-    </div>
-`);
-    udom();
-    
-    let incBtn = counter.querySelector('button');
-    incBtn.onclick = () => {
-        State.counters[index]++;
-        console.log(State.counters);
-        render(app, Counter())
-    };
-    return view;
-};
-
-
-
-render(app, Counter())
-    </script>
+    <script type="module" src="./src/index.js"></script>
 </body>
 
 </html>

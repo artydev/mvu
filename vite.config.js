@@ -4,7 +4,7 @@ const { defineConfig } = require('vite')
 module.exports = defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/mvu.ts'),
+      entry: path.resolve(__dirname, 'src/index.js'),
       name: 'mvu',
       fileName: (format) => `mvu.${format}.js`
     }
