@@ -1,9 +1,9 @@
 # MVU
 
 
-Comment
+Comment !!
 
-Based on [DML](https://github.com/efpage/DML) and [Morphdom](https://github.com/patrick-steele-idem/morphdom)
+Based on [DML](https://github.com/efpage/DML), [Morphdom](https://github.com/patrick-steele-idem/morphdom) and [HTL](https://github.com/observablehq/htl)
 
 [![](https://data.jsdelivr.com/v1/package/gh/artydev/mvu/badge)](https://www.jsdelivr.com/package/gh/artydev/mvu)
 
@@ -12,72 +12,74 @@ The idea is to make the view a function of the state only.
 
 MVU can be used directly in the browser, and don't use any external framework, it's plain vanilla Javascript.
 
-A [simpleCounter](https://flems.io/#0=N4IgtglgJlA2CmIBcBWAzAOgGwoDQgGd4EBjAF3imRAwAsyxYR8CSAnAe1iaQG0AGXAEYhaALr4AZhAQFkvUADsAhmERIa9RsxAkOiigeoAeAIQARAPIBhACoBNAAoBRAARbYAPgA6i4x9dYZUUAcwBebxB4RUifGL9aeGUoONc012M1MmVXElplNiIyCJAAVVsAMQBaAA5Y33SMrJz6MgAHKvgARwBXCAA3EoANKtKAQSrrDjA25TIIACMESNz9Q2LIgElnMMoQ+HrFRsz4bNcVNRL+iHgAdzaONjIVvQNojZBb6DJaMKh4a4keBVL5QH64VwQRQQebKWBVVhw+BhIQYfiHY7zMgITwAZQgMwQrimPTebGMAHosTiGuljKw2BA2mRXAQ2CQSq02gQkBSKSQoIoMAArAj-WADNgYRSnCkhWgUgpkACe-36FLA-R6AAFUaiAEwUqAQAhkDVajA9MBQDCQIWi2KUhlMshxSmJZJxXzGBYcKDK1J0439SFQErKNptQ60tKU4OB2PO5leo6NdKvU2uYBQaYQno5sAQwvuBiwCFsaL-NiuAC+rjCrgAsgA1UoAbl8MbTCBZprm8HrWa7afTHFJFDYSFc6NTI5rndnaYzLIWPTIZH0g7AAApIqv1-pIgBKDuLxrL9xCLe7kC0ITH08jtIX2j66+RV8P4fpb9pSSk8gIE3EkyW3PsKCPIczzTPlXFuAdbjYCNXB+Ac9BmfR3lcBZTng6JXG3As8wLSCCAJGQClgZUUI4AjjHjCE4wGTwjyPX90lgghaJ+OY4LQ4JXArSR4ArRQgUhFkkjIqjXGCKBZMjGTTWVBAIQBd4CAwLT2LSHtVnHETBwLbdIJ09I9KhEhBxM+tPCzVlsgoDA9AM6sAGoGyENtXB6NooH7AB9a47jAxz4EgmtHyfRpX23AADFyyVcKcABJgHA+BnLHMkazitjoJHfcN0UG9LOPDB9BICUSAAa0HSyoui-NphMszEonZyggIAgABkTTIDBkigG92pEr8CvSCsyB6NgjlGthGrTed4mi-8xPmTcxkjUL+0g4AzN005XGC24jJak8DrTDxtwAcn8N9lIQEoKAADzIKo4QgEJFCQIEyViMZjpE6iyMJNDsond19U8G78ui6KQInHaIMu5qdwuibGimmajhO9jlvYtbAM3Xz-IoIKbluZHwqg+G0lEqttwjNoIS2tpqdY-H2PY0nApOjnfy7J12BdN0KV9f0U3dUtPB0IhSA2xQ5A0fUAE4kAAdgAFhAGtcCUVR1BoUUdFedZqF8OXiHgYmleoIQkH4XX9ZAC4jec7rTbWd5qCy1zadcWYYChEIkCEfg2hetswAKEIoUd2S1w4NtXvez7vt+94RO8302CrKchEj1kuGgbCglqttQR+JB9X4COo98GsrYVoC7Y0B2ah1msJFdw3qCJxWS20GsgA) :
+Here is an example , you can test it here [ChooseColors](https://flems.io/#0=N4IgtglgJlA2CmIBcBWA7AOgMwBYA0IAxgPYB2AzsQskVbAIYAO58UIBAZhAucgNqhS9MIiQgMACwAuYWO1qkp8RTQA85QgCcIjKQAJymwgF4AOiGlTmSAPQ3CUUhgBW5KPFgQAbpoyl4UjYA5hI29JpSAJ7uXjZgXgCuAAIATBgADBgAjDZQEOSB8QkYCWBQGJBOruYAfKo2Gtq6Naakrap5XnrQZiBMjLWtenrtud418iwIhFIQZLxiWUjpIAC+eILCouKu8iSKylI0+wV6wHrSsnh6UMRg1wm393qayu6a1+ReQXqresZ6IoYACyADUAKoAblaJ30UnCQQC-xuxEIpUOGERUgAoggRIoAEKRACSUAAFOZ+uYAJStBD6Ar0JTI4BDYbdUgQKRIPRSTQJeB4NnDV5QHkpFAoIWkdl6IKvZQ8rIpAAc0tlACNYAKlRLWqtWhwEqQZnMZQBhCBGBBkxlKalnYV6WEGPkkWDETTI23w+3-Gp6AAGmiCGrJABJgHb4BhRetI9HMQrSPGo76Y1qBatqYHoTL2fS9KRiO5vU7ZV8goH1N89AB3aBSCS9LLpdKMAAe5gu8AgISkLbbne7XFgsGMCbdVE9PqZ8Gpqxa+dlsoT32rhCthAQzo7xhQ6WdkX3h80J7q9i3CBqgYNy-Z9UrN6dtPvrykCU0MuL7n1huNppkHoADKnjvGS7qep86YOqy96FuQYHwF6AJPGS1J5rKhYQKQjAJPoAKXLAgblnoHTjCM94rmRnSupECC9Hk5CMAwkRIBwCAdpC9CeEEpAALRcvAYDkEghCHMhgxUdRD60XRDHmA2UBNqg7ZcUoHZSPxPF9qQSDaP2kJgAiOH8QZ0hIK2nbQiAS4yfZ7KRpBviEBI4QAIJSGS6TUhgUjEOCjCMMh5r0Cw6F3g5K71J0dlRbJ4ykfFZE4XhcKRMFvSaPQpCIt2lS9Ok+X0Hu5gSig3ZeDxAoTmmc58M5AC6i5JTJMWJdJDmTvVTWRQ57VeHFsoDc+96PHc6GYeyqX4RgZAzQRehGiasxAWS86Op1eiFlV2rwMiMbwiGAQYLtAqtdGDXTpojXImd8BTdRCSMFAc6zvaTp9SKASfjKiHQJJKb-itZp6AAKlyO7oZtwyFrMUg7oRMjEaoEhZDU7kgRAYAsft5rXeQejmhIxDECwmj1Gjo3fR+X68pD8B-qQy2ATK7lBe9G1wVhSL9MiaEYU6REkdJkYQwj8ARaR5FdNuYXkMYADkzn8a5pPk4rQ3RbFkaWtakvRguI2tcMMvOgw5AK+YKv-e8UnJTLWtRY7kagQDmgUiAormNBc5G2Mg0m9r4yu0hHvmPK8DKD7rp+6sxtbdRLvAG74HmJmjPsLH9rxwHTttXnQcJ0neeBpRsrjWAk1Ou+v16FSQPMwBq0ys9r1KJzsE128yFkkdWLXOzjCd6+d5t29huPSurQz6QkwePArMLCAWQAJzLPxKTpMsawbCAQgiDQGCEJbexkEoKhiBqJaRDDegavQhAANbysQxpQHoPJao-T9TYw9AwBwkEZYU1jIhhwiAtkzkkB1gkEJPMfxZ4AGI+bcxuPkFi9A2IcXgFxNkzgEgFAgBwSIqtz6HB5MxR+8BtKaDfqQKAkJKJ3laMfa6qsSZk2QnfDSWkdJ8TEhJL0f8AF5FykqFA1k2TX00O8JUnYDBUGgPWOBSgEGzzYR6TQ-FbbcLQUxTB2DOKgJMnpQ89B8LEBEYA8RegsiSLwfmAhRCSFkIOIoSh-9xK0PoYw2ewx-42KCGZPsFkDzDhTPPaYLdl72KQCkAAbGsZqQA)
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Counter</title>
-    <script src="https://cdn.jsdelivr.net/gh/artydev/mvu@1.1.2/dist/mvu.umd.min.js"></script>
-</head>
-
-<body>
-    <div id="app">
-
-    </div>
-    <script>
-
-        const {dom, udom, m, html, render } = MVU;
-
-        let state = {
-            counter: 0
-        }
-
-        const button = m("button");
-        const h1 = m("h1");
-        const h2 = m("h2");
-        
-        function Counter(state) {
-          // we wrap the component between (dom, udom) similarly to (<div>, </div>))
-          // so that we can reference it easily and apply style, events...
-          let counter = dom() 
-            let inc = () => { state.counter += 1; update_view(state) };
-            h2(`counter : ${state.counter}`)
-            button("inc").onclick = inc;
-          udom()
-          counter.classList.add("counter");
-          return counter;
-        }
-
-        function App(state) {
-            let view = dom();
-                html('<h2 style="text-align:center">A very simple counter</h2>')
-                Counter(state)
-            udom();
-            return view
-        }
-
-        function update_view(state) {
-           render(app, App(state))
-        }
-        
-        update_view(state)
-       
-    </script>
-</body>
-
-</html>
- ```
-     
-You can try other demos here : [Examples](https://github.com/artydev/mvu/wiki/MVU-in-practice)
-
-
-
+```js
+const { html, dom, udom, render, svg } = mvu.MVU;
+const target = document.getElementById("app")
+let state = {
+    init: true,
+    red: 255,
+    green: 128,
+    blue: 125
+}
+function Circle(state) {
+    const strcolor = (state) => `rgb(${state.red},${state.green},${state.blue})`;
+    let node = (
+        svg`<svg width="100px" height="100px" fill=${strcolor(state)}>
+          ${svg`<circle cx=50 cy=50 r=50></circle>`}
+      </svg>`
+    )
+    return node
+}
+function Slider(color, state) {
+    let slider = dom();
+    let input = html`
+      <div> 
+          <div style="display:flex;align-items:center">
+              <div  style="width:50px;text-align:right;margin-right:10px;">
+                  ${color.charAt(0).toUpperCase()}
+              </div>
+              <div>
+                  <input type="range" min="0" max="255" value=${state[color]}>
+              </div>
+               ${state[color]}
+          </div>
+      </div>`
+    udom();
+    input.oninput = function (e) {
+        let value = e.target.value
+        state[color] = value;
+        update(state)
+    }
+    return slider
+}
+function Title () {
+  let title = html`<h1>A Simple Colors Chooser</h1>`
+  return title
+}
+function App(state) {
+    let app = dom();
+    html`
+      ${Title()}
+      <div class='color-chooser'>
+        <div>${Circle(state)}</div>
+          <div class="color-slider">
+            <div>
+              <div>${Slider("red", state)}</div>
+              <div>${Slider("green", state)}</div>
+              <div>${Slider("blue", state)}</div>
+            </div>
+          </div>
+      </div>` 
+    udom();
+    return app
+}
+function update(state) {
+    render(target, App(state))
+}
+update(state);
+``̀
 
 
 

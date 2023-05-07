@@ -249,7 +249,6 @@ function svg(strings, ...substitutions) {
  
   let node = HTL.svg(strings, ...substitutions)
   node.fragment = HTL.svg.fragment
-  console.log(node.fragment)
   appendBase(node)
   return node
 }
