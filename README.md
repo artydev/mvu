@@ -1,8 +1,5 @@
 # MVU
 
-
-Comment !!
-
 Based on [DML](https://github.com/efpage/DML), [Morphdom](https://github.com/patrick-steele-idem/morphdom) and [HTL](https://github.com/observablehq/htl)
 
 [![](https://data.jsdelivr.com/v1/package/gh/artydev/mvu/badge)](https://www.jsdelivr.com/package/gh/artydev/mvu)
