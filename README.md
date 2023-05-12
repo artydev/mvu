@@ -78,37 +78,6 @@ function update(state) {
 update(state);
 ``̀
 
-Here is the a more compact version : [ChooseColorCompact](https://flems.io/#0=N4IgtglgJlA2CmIBcA2A7AOgIwE4A0IAZhAgM7IDaoAdgIZiJIgYAWALmLCAQMYD21NvEHIQAHlI8AThAAObAASkpPALwAdEOzazSSAPT6eUahgBWpKPFgQAblIzV4bfQHMW+2lLYBPK7f0wWwBXAAEAJgwABgwAZn0oCFIXIOCMYLAoDEhTC00APjF9SRl5fPVqCrFE2wVoDRBaWVkCioUFKoS7fO4QUmt4HjYIAXImcKQsABYQAF88GnpGZgte-kFhNlF15IVgBXZOPAUoPjBj4NPzhSlhKylj0ltXY7AFWYVVBVSMAFkANQAqgBuCoVHaKMA8CAqBCfBQACgAlJ98h1qO0wAiAOQ1bFInHY44AAwA7tA2CwkFMorIAB7AljwCDuNjU2kMgBGtB4AGtXFI+MFqFAkLcoMDOXwpPcALRSWiJYJ6ACsUQApMSkaDKtQIUobPd4Qicq9aHTjrZaLBgvAUao0W1vjiINRZME2PiEZpNMdgL5ZPAFEgOiAFdRXPBfUpfAgkJpEqRZLBaD4kJzYHw+dGwObXq7LdbbbNtWDqIRhUMRhj+mwAMJ8TNSBHWNjHABKxwA4scAEJI-ZO1sYZI+BAYbl8gVCkUNpvw4lSVychEAEmA7YwVpt8Hm667W6Lu7w697h53JeJFVmwPRFQreuGAgUAEFmoiUcAnfqmrJ4VcPx1dp2n1aFYSDL4oRhHg4WRIDgP1ChOwUHsFF7ABdeEKFIQ14GbKJjnCFUVWOLBwgADiRR5cPwwjiMI2IqINaA8IRAiFCIkiFHQJF0Pgy4zjgp0nSQ7s+3QjBCGlABRHkWARBFSHtNFgFIDABFdd1FC+ZFUSUZw52lBEwJg+AOzEtCkRLeCnVrQzmxMhBzJQvtSwxdF2luNhgikDFfx1WYy1uEVWN-Y431kZE3IqXp+gQKtRlEcI0CQKJZSiVK5gWEA6AYUQMB4UhyF4AQhBEJgR1w9ov3cxNk1TdNMz5ALYoGBLqDGEAsEmGZZnQ2YgA)
-
-```js
-const { html, dom, udom, render, svg, m } = mvu.MVU;
-
-const mcircle = () => 
-  m('div')('', `width:40px;height:40px;background:red;border-radius:50%`);
-
-const slider = (min, max, value) => 
-  m('input')("", {type : "range", style:"display:block", max, min, value});
-
-function setColor(elt, R, G, B){ 
-  elt.style.backgroundColor = `rgb(${R.value},${G.value},${B.value})`
-}; 
-
-function App () {
-  const app = dom ();
-    const circle = mcircle ();
-    const [R, G, B] = [slider(0, 255, 128), slider(0, 255, 23), slider(0, 255, 67)];
-  udom();
-  
-  [R, G, B].forEach((s) => {s.oninput = () => setColor(circle, R, G, B)});
-  
-  setColor(circle, R, G, B);
-  
-  return app;
-}
-
-render(app, App());
-```
-
 
 
 
