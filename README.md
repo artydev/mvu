@@ -4,7 +4,7 @@ Based on [DML](https://github.com/efpage/DML), [Morphdom](https://github.com/pat
 
 [![](https://data.jsdelivr.com/v1/package/gh/artydev/mvu/badge)](https://www.jsdelivr.com/package/gh/artydev/mvu)
 
-MVU tries to follows the Model View Update pattern.
+MVU tries to follow the Model View Update pattern.
 The idea is to make the view a function of the state only.
 
 MVU can be used directly in the browser, and don't use any external framework, it's plain vanilla Javascript.
