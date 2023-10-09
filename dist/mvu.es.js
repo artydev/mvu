@@ -1,5 +1,5 @@
 var ze = 11;
-function at(e, n) {
+function st(e, n) {
   var t = n.attributes, a, f, E, _, R;
   if (!(n.nodeType === ze || e.nodeType === ze)) {
     for (var H = t.length - 1; H >= 0; H--)
@@ -8,31 +8,31 @@ function at(e, n) {
       a = J[j], f = a.name, E = a.namespaceURI, E ? (f = a.localName || f, n.hasAttributeNS(E, f) || e.removeAttributeNS(E, f)) : n.hasAttribute(f) || e.removeAttribute(f);
   }
 }
-var ge, st = "http://www.w3.org/1999/xhtml", k = typeof document > "u" ? void 0 : document, lt = !!k && "content" in k.createElement("template"), ft = !!k && k.createRange && "createContextualFragment" in k.createRange();
-function ut(e) {
+var ge, lt = "http://www.w3.org/1999/xhtml", k = typeof document > "u" ? void 0 : document, ft = !!k && "content" in k.createElement("template"), ut = !!k && k.createRange && "createContextualFragment" in k.createRange();
+function ct(e) {
   var n = k.createElement("template");
   return n.innerHTML = e, n.content.childNodes[0];
 }
-function ct(e) {
+function ot(e) {
   ge || (ge = k.createRange(), ge.selectNode(k.body));
   var n = ge.createContextualFragment(e);
   return n.childNodes[0];
 }
-function ot(e) {
+function dt(e) {
   var n = k.createElement("body");
   return n.innerHTML = e, n.childNodes[0];
 }
-function dt(e) {
-  return e = e.trim(), lt ? ut(e) : ft ? ct(e) : ot(e);
+function Tt(e) {
+  return e = e.trim(), ft ? ct(e) : ut ? ot(e) : dt(e);
 }
 function Ne(e, n) {
   var t = e.nodeName, a = n.nodeName, f, E;
   return t === a ? !0 : (f = t.charCodeAt(0), E = a.charCodeAt(0), f <= 90 && E >= 97 ? t === a.toUpperCase() : E <= 90 && f >= 97 ? a === t.toUpperCase() : !1);
 }
-function Tt(e, n) {
-  return !n || n === st ? k.createElement(e) : k.createElementNS(n, e);
-}
 function At(e, n) {
+  return !n || n === lt ? k.createElement(e) : k.createElementNS(n, e);
+}
+function pt(e, n) {
   for (var t = e.firstChild; t; ) {
     var a = t.nextSibling;
     n.appendChild(t), t = a;
@@ -83,22 +83,22 @@ var Ye = {
       e.selectedIndex = t;
     }
   }
-}, Ee = 1, pt = 11, qe = 3, Ze = 8;
+}, Ee = 1, Et = 11, qe = 3, Ze = 8;
 function Y() {
 }
-function Et(e) {
+function _t(e) {
   if (e)
     return e.getAttribute && e.getAttribute("id") || e.id;
 }
-function _t(e) {
+function vt(e) {
   return function(t, a, f) {
     if (f || (f = {}), typeof a == "string")
       if (t.nodeName === "#document" || t.nodeName === "HTML" || t.nodeName === "BODY") {
         var E = a;
         a = k.createElement("html"), a.innerHTML = E;
       } else
-        a = dt(a);
-    var _ = f.getNodeKey || Et, R = f.onBeforeNodeAdded || Y, H = f.onNodeAdded || Y, J = f.onBeforeElUpdated || Y, j = f.onElUpdated || Y, Ce = f.onBeforeNodeDiscarded || Y, ee = f.onNodeDiscarded || Y, me = f.onBeforeElChildrenUpdated || Y, ue = f.childrenOnly === !0, D = /* @__PURE__ */ Object.create(null), h = [];
+        a = Tt(a);
+    var _ = f.getNodeKey || _t, R = f.onBeforeNodeAdded || Y, H = f.onNodeAdded || Y, J = f.onBeforeElUpdated || Y, j = f.onElUpdated || Y, Ce = f.onBeforeNodeDiscarded || Y, ee = f.onNodeDiscarded || Y, me = f.onBeforeElChildrenUpdated || Y, ue = f.childrenOnly === !0, D = /* @__PURE__ */ Object.create(null), h = [];
     function w(o) {
       h.push(o);
     }
@@ -113,7 +113,7 @@ function _t(e) {
       Ce(o) !== !1 && (c && c.removeChild(o), ee(o), M(o, u));
     }
     function te(o) {
-      if (o.nodeType === Ee || o.nodeType === pt)
+      if (o.nodeType === Ee || o.nodeType === Et)
         for (var c = o.firstChild; c; ) {
           var u = _(c);
           u && (D[u] = c), te(c), c = c.nextSibling;
@@ -174,7 +174,7 @@ function _t(e) {
     var b = t, W = b.nodeType, ie = a.nodeType;
     if (!ue) {
       if (W === Ee)
-        ie === Ee ? Ne(t, a) || (ee(t), b = At(t, Tt(a.nodeName, a.namespaceURI))) : b = a;
+        ie === Ee ? Ne(t, a) || (ee(t), b = pt(t, At(a.nodeName, a.namespaceURI))) : b = a;
       else if (W === qe || W === Ze) {
         if (ie === W)
           return b.nodeValue !== a.nodeValue && (b.nodeValue = a.nodeValue), b;
@@ -195,7 +195,7 @@ function _t(e) {
     return !ue && b !== t && t.parentNode && (b.actualize && (b = b.actualize(t.ownerDocument || k)), t.parentNode.replaceChild(b, t)), b;
   };
 }
-var vt = _t(at);
+var ht = vt(st);
 (function(e, n) {
   typeof exports == "object" && typeof module < "u" ? n(exports) : typeof define == "function" && define.amd ? define(["exports"], n) : (e = typeof globalThis < "u" ? globalThis : e || self, n(e.htl = {}));
 })(globalThis, function(e) {
@@ -220,7 +220,7 @@ var vt = _t(at);
     for (; s.firstChild; )
       d.appendChild(s.firstChild);
     return d;
-  }) }), _ = 9, R = 10, H = 12, J = 13, j = 32, Ce = 65, ee = 90, me = 97, ue = 122, D = 60, h = 62, w = 47, M = 45, I = 33, te = 61, ne = 34, _e = 39, re = 63, S = 1, b = 2, W = 3, ie = 4, V = 5, B = 6, $ = 7, o = 8, c = 9, u = 10, T = 11, g = 12, y = 13, U = 14, Q = 15, L = 16, O = 17, x = 18, ae = 19, ce = 20, De = 21, ke = 22, oe = 23, Le = 24, xe = 25, P = 26, Re = 27, Be = 28, Pe = 29, tt = 128, He = 1, nt = 8, rt = 1, Ge = "http://www.w3.org/2000/svg", K = "http://www.w3.org/1999/xlink", Ie = "http://www.w3.org/XML/1998/namespace", Ve = "http://www.w3.org/2000/xmlns/", Fe = new Map([
+  }) }), _ = 9, R = 10, H = 12, J = 13, j = 32, Ce = 65, ee = 90, me = 97, ue = 122, D = 60, h = 62, w = 47, M = 45, I = 33, te = 61, ne = 34, _e = 39, re = 63, S = 1, b = 2, W = 3, ie = 4, V = 5, B = 6, $ = 7, o = 8, c = 9, u = 10, T = 11, g = 12, y = 13, U = 14, Q = 15, L = 16, O = 17, x = 18, ae = 19, ce = 20, De = 21, ke = 22, oe = 23, Le = 24, xe = 25, P = 26, Re = 27, Be = 28, Pe = 29, nt = 128, He = 1, rt = 8, it = 1, Ge = "http://www.w3.org/2000/svg", K = "http://www.w3.org/1999/xlink", Ie = "http://www.w3.org/XML/1998/namespace", Ve = "http://www.w3.org/2000/xmlns/", Fe = new Map([
     "attributeName",
     "attributeType",
     "baseFrequency",
@@ -314,7 +314,7 @@ var vt = _t(at);
               break;
             }
             case S: {
-              i == null || (i instanceof Node || typeof i != "string" && i[Symbol.iterator] || /(?:^|>)$/.test(C[A - 1]) && /^(?:<|$)/.test(p) ? (N += "<!--::" + A + "-->", be |= tt) : N += `${i}`.replace(/[<&]/g, se));
+              i == null || (i instanceof Node || typeof i != "string" && i[Symbol.iterator] || /(?:^|>)$/.test(C[A - 1]) && /^(?:<|$)/.test(p) ? (N += "<!--::" + A + "-->", be |= nt) : N += `${i}`.replace(/[<&]/g, se));
               break;
             }
             case c: {
@@ -495,7 +495,7 @@ var vt = _t(at);
       for (; Qe.nextNode(); ) {
         const A = Qe.currentNode;
         switch (A.nodeType) {
-          case rt: {
+          case it: {
             const G = A.attributes;
             for (let p = 0, i = G.length; p < i; ++p) {
               const { name: v, value: l } = G[p];
@@ -504,7 +504,7 @@ var vt = _t(at);
                 je(A, v), --p, --i;
                 for (const pe in fe) {
                   const X = fe[pe];
-                  X == null || X === !1 || (typeof X == "function" ? A[pe] = X : pe === "style" && we(X) ? We(A[pe], X) : it(A, pe, X === !0 ? "" : X));
+                  X == null || X === !1 || (typeof X == "function" ? A[pe] = X : pe === "style" && we(X) ? We(A[pe], X) : at(A, pe, X === !0 ? "" : X));
                 }
               } else if (/^::/.test(l)) {
                 const fe = arguments[+l.slice(2)];
@@ -513,7 +513,7 @@ var vt = _t(at);
             }
             break;
           }
-          case nt: {
+          case rt: {
             if (/^::/.test(A.data)) {
               const G = A.parentNode, p = arguments[+A.data.slice(2)];
               if (p instanceof Node)
@@ -559,7 +559,7 @@ var vt = _t(at);
   function Te(s, d, C) {
     return s.slice(d, C).toLowerCase();
   }
-  function it(s, d, C) {
+  function at(s, d, C) {
     if (s.namespaceURI === Ge && (d = d.toLowerCase(), d = Fe.get(d) || d, ve.has(d))) {
       s.setAttributeNS(ve.get(d), d, C);
       return;
@@ -583,13 +583,13 @@ var vt = _t(at);
 });
 const Oe = htl;
 var q, Z = [];
-function ht(e) {
+function St(e) {
   return Z.push(q), Z.length > 100 && (alert("DML error: _baseStackOverflow in bushBase()"), Z = []), typeof e == "string" && (q = document.getElementById(e)), q = e, q;
 }
 function Je() {
   return Z.length;
 }
-function St(e = 1, n = -1, t = "unselectBase") {
+function bt(e = 1, n = -1, t = "unselectBase") {
   for (let a = 0; a < e; a++) {
     if (Z.length <= 0) {
       alert("DML error: _baseStack empty in popBase()");
@@ -600,14 +600,14 @@ function St(e = 1, n = -1, t = "unselectBase") {
   }
   return Z.length;
 }
-function bt(e) {
+function gt(e) {
   if (typeof e == "string") {
     let n = ye("span", null, null);
     return n.innerHTML = e, n;
   } else
     return e;
 }
-function gt(e, n) {
+function Nt(e, n) {
   return typeof n == "string" && (n = {
     style: n
   }), typeof n == "object" && Object.keys(n).forEach(function(t) {
@@ -625,10 +625,10 @@ function gt(e, n) {
 }
 function ye(e, n, t) {
   let a = document.createElement(e), f = Array.isArray(t);
-  return t && (typeof t == "number" && (t = String(t)), typeof t == "string" ? a.innerHTML = t : f ? a.append(...t) : a.appendChild(t)), n && gt(a, n), a;
+  return t && (typeof t == "number" && (t = String(t)), typeof t == "string" ? a.innerHTML = t : f ? a.append(...t) : a.appendChild(t)), n && Nt(a, n), a;
 }
 function Ue(e) {
-  let n = bt(e);
+  let n = gt(e);
   if (q)
     q.appendChild(n);
   else if (document.body)
@@ -642,10 +642,10 @@ function Ue(e) {
 function et(e, n, t) {
   return Ue(ye(e, n, t));
 }
-function Nt(e, n) {
+function Ot(e, n) {
   return et("div", n, e);
 }
-const Ot = (e = Nt("", null)) => ht(e), Ct = St, mt = (e) => (n, t) => {
+const Ct = (e = Ot("", null)) => St(e), mt = bt, tt = (e) => (n, t) => {
   let a = et(e, t, n);
   return a.name = e, a;
 };
@@ -667,10 +667,14 @@ function yt(e) {
 function Ut(e, n) {
   const t = (f, E) => !f.isEqualNode(E);
   let a = e.firstChild;
-  vt(a, yt(n), { onBeforeElUpdated: t });
+  ht(a, yt(n), { onBeforeElUpdated: t });
 }
-const Dt = { m: mt, dom: Ot, udom: Ct, render: Ut, html: kt, svg: wt };
-console.log("version v2.0.3");
+const Dt = {
+  get: function(e, n) {
+    return tt(n);
+  }
+}, Lt = new Proxy({}, Dt), xt = { m: tt, dom: Ct, udom: mt, render: Ut, tags: Lt, html: kt, svg: wt };
+console.log("version v2.1.0");
 export {
-  Dt as MVU
+  xt as MVU
 };

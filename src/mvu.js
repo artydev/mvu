@@ -271,7 +271,16 @@ function render (target, view) {
   morphdom(prevDom, wrapView(view), {onBeforeElUpdated})
 }
 
-const MVU = { m, dom, udom, render, html, svg}
+
+const handler =  {
+  get : function (target, tagname) {
+    return m(tagname)
+  }
+}
+
+const tags = new Proxy({}, handler)
+
+const MVU = {m, dom, udom, render, tags, html, svg}
 
 export { MVU }
 

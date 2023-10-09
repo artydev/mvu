@@ -1,7 +1,7 @@
 {
   "name": "mvu",
-  "version": "1.1.0",
-  "description": "mvu",
+  "version": "2.1.0",
+  "description": "mvu - simple ui library",
   "files": [
     "dist"
   ],

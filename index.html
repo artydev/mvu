@@ -12,8 +12,11 @@
     </div>
     <script type="module">
         import { MVU } from "./src/index.js"
-        const { html, render } = MVU
-        render(document.getElementById("app"), html`<h1>Hello from MVU`)
+        const { dom, udom, render, tags } = MVU;
+        
+        const { div } = tags;
+
+        render(document.getElementById("app"), div("HELLO"))
     </script>
 </body>
 </html>
