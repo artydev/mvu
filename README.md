@@ -86,6 +86,7 @@ Here is the a more compact version : [ChooseColors](https://flems.io/#0=N4Igtglg
 
 
 ```js
+const { html, dom, udom, render, svg, tags } = mvu.MVU;
 const { div, input, span } = tags;
 
 const mcircle = () => 
