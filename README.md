@@ -82,11 +82,10 @@ update(state);
 
 
 
-Here is the a more compact version : [ChooseColors](https://flems.io/#0=N4IgtglgJlA2CmIBcA2A7AOgIwE4A0IAZhAgM7IDaoAdgIZiJIgYAWALmLCAQMYD21NvEHIQAHlI8AThAAObAASkpPALwAdEOzazSSAPT6eUahgBWpKPFgQAblIzV4bfQHMW+2lLYBPK7f0wWwBXAAEAJmwMAAZ9KAhSFyDgjGCwKAxIUwtNAD4xfUkZeVz1ajKxeNsFaA0QWllZPLKFBQq4u1zuEFJreB42CAFyJmikAFYADhAAXzwaekZmC27+QWE2UTXEhWAFdk48BSg+MCPgk7OFKWErKSPSW1cjtlpXUgUZhVUFZIwAWQAagBVADcZW2ij2VSOEGosmCbAeslo1E+3wUr3e4PK1Ehvx4EBUCAxAAoAJTfXJtNHHOykgDkDKOAAMAO7QNgsJAAFmisgAHqCWPAIO42Lz+UKAEa0HgAa1cUj4wWoUCQNygoOlfCkdwAtFJaPFgnpxtEAKQs8k4iHDRQAZRsdzJWSOYFoAqOtlosGC8CONml1gQlNU1OALQUCEUpGd8CkGMuCgpONarVIKOopKDIfgNqjrRjCmsg3hiIxcIRbFJmk0R2Avlk8AUSDaICN1Fc8HrSl8CCQmnimdgtB8SGlsD4Ct7Hq9vzh3t9-pmBdpRecJdgbB9fpbPyqpNLVcRGF3-owbD4DrYMi7FMpUYup1TUbj0ATGESPgQGGHslHHwMU0QgEAFTQ02uZxgikNFI3XdMT0UNtj3LJFC3Tc94BQ7csKjGYygI3FCFVAYhjRXo2AAYT4KcpCPbcjgAJSOABxI4ACFyT2KNSy-ft4AwWUFSVFU1RouiMRZKRXGlUkABJgCYjAkLPZd4DmRTWJUtC1L3TTgA4nTqz0ldyRZQjQRpMoSLxQYBAUABBRoU0peDWnxBpZCTU5XMgjz7QUQliX3AkiR4ElXwQ-EKBYhR2IUDiAF0MQoDDWidD96OiI5wnGcYjiwcJJiOTQmM0ckjhpdN00yu5SRyhQ8oKhQipK1pNFYirSoQjL42y3L8sK4rSpADiKowpLIOfMAoo62lYrYzikowQhdQAUTlFhSVJd87jDCMML2z9VIEJCyQO1p3JqoLwt-b9f2ExVlVVKAJN1KSZLkxSmIM1iDI41cWX89NjocLCdKcKQABV4AFRQfjB4zTzwhCiNaVdILfZx3vo4KIoDBQ4oSrisdpG42BgtEvJxIiyhuNUE1JLyjmc2QH1tahul6BAyOGUQeRQJBon1MZolmeYQDoBhRAwHhSHIXgBCEEQmC-eMrqjf9AInKcFVp7m+j56gRhALAkCwHlZiSghpaWXHSDqhNZiAA)
+Here is the a more compact version : [ChooseColors](https://flems.io/#0=N4IgtglgJlA2CmIBcA2A7AOgIwE4A0IAxgPYB2AzsQskVbAIYAO58UIBAZhAucgNqhS9MIiQgMACwAuYWO1qkp8RTQA85QgCcIjKQAJymwgF4AOiGlTmSAPQ3CUUhgBW5KPFgQAbpoyl4UjYA5hI29JpSAJ7uXjZgXgCuAAIATNgYAAw2UBDkgfEJGAlgUBiQTq7mAHyqNhraulWmpM2qOV560GYgTIzVzXp6rdneVfIsCIRSEGS8YhlIAKwAHCAAvniCwqLirvIkispSNAd5esB60rJ4elDEYDcJdw96msrumjfkXkE3UvRBch6NZ6Yx6AoYACyADUAKoAbmap30F3aNwgpEYCSkX0Y9FIwNBen+gMRLVIyPBhAgRgQRIAFABKUFVIYE27eekAci5NwABgB3aBSCRIAAsGUYAA94RJ4BAQlJxZKZQAjeiEADWQU0xASpCgSDeUHhquImg+AFpNPQcglyEsMgBSPmMslI2b6ADKng+DPKNzA9ClNy89FgCXgN08qo8CGZxlZwAGegQ+nIvvgmiJzz0TLJg0G5DxpHpMbj8DdKcGab0HmmmOxRIxWKk9PM5huwCijHgeiQQxANtIQXgnYMUQQSHMOWLDEiSFVsGIWvHQZD4IxofDkbWVfZNYCddgUjDEb7YPa9PrLexGDPkYwUmIXqk2hHTOZKae93zKYz0BZhgeSRAgGCzow85EuYHAIFK5gFq8AQJJoBLJgeha3voA43o2OLVoWD7wDhJ5ESmazNBR5IcPqUwzASLBSAAwlQ5rXieNwAEo3AA4jcABCjIXCmpxUPAGDLkE9KcRgWH3julYpvWwGTuJ6pajqeoGixy7ZmCfKaEEqr0gAJMAMlyURGxmTxsl4fJ57WcA-F2a2Dm7oyfKUfCbLNDRFLTGQegAIKMIwebMuhgyUr0Ob3BFiHRZ6ejUrSF5UjShB0n+GGUnw3F6Hxej8QAukSfAEYMPqAZo9IZDcKSLIsNxYCkyw3OYnHmIyNxsoWhbVR8dUNU1LVtb15g8d1HUYVVma1fVeiNc1eite1g78d1BElYhP5gDlgwpvlvECSVGAcOaACiGoSPS9IAR8CZJgRD1AXJZBYQyT2DFF-UpZlYEgWB6narq+pQDp5pEgZRmmeZrl3lZeA2QjUjufATkuZZCl7nyiWFq9vhEXZ-iaAAKvAUr6GChOo+jfWFlRgx7oh-4BJDtWpVlUZ6AVRWCT5KYpm8UgoQSvRklRzRvAaWb0r0NyhYwn7uqQ4wePAdGzDQKDiig6ybCAQgiDQGCEOQvAEAcSgqGIwGZj9KYQfOi7Llqkvq5MgUUDQWBIFgYrrCVBDGzsHPkINWbrEAA)
 
 
 ```js
-const { html, dom, udom, render, svg, tags } = mvu.MVU;
 const { div, input, span } = tags;
 
 const mcircle = () => 
@@ -106,6 +105,7 @@ const Slider = (min, max, value, libelle) => {
 }
 
 function setColor(elt, R, G, B){ 
+  console.log(R.input.value)
   elt.style.backgroundColor = `rgb(${R.input.value},${G.input.value},${B.input.value})`
 }; 
 
@@ -121,12 +121,12 @@ function App () {
   
   [R, G, B].forEach((slider) => {
     slider.input.oninput = () =>  {
-      circle.style.backgroundColor = `rgb(${R},${G},${B})`;
-      slider.value.innerText = slider.input.value
+      circle.style.backgroundColor = `rgb(${R.input.value},${G.input.value},${B.input.value})`;
+      slider.value.innerText = slider.input.value 
     }
   });
   
-  setColor(circle, R, G, B);
+  setColor(circle, R, G, B); 
   
   return app;
 }
