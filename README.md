@@ -79,31 +79,51 @@ update(state);
 
 ```
 
-Here is a more compact version :
 
 
-Here is the a more compact version : [ChooseColorCompact](https://flems.io/#0=N4IgtglgJlA2CmIBcA2A7AOgIwE4A0IAZhAgM7IDaoAdgIZiJIgYAWALmLCAQMYD21NvEHIQAHlI8AThAAObAASkpPALwAdEOzazSSAPT6eUahgBWpKPFgQAblIzV4bfQHMW+2lLYBPK7f0wWwBXAAEAJgwABgwAZn0oCFIXIOCMYLAoDEhTC00APjF9SRl5fPVqCrFE2wVoDRBaWVkCioUFKoS7fO4QUmt4HjYIAXImcKQsABYQAF88GnpGZgte-kFhNlF15IVgBXZOPAUoPjBj4NPzhSlhKylj0ltXY7AFWYVVBVSMAFkANQAqgBuCoVHaKMA8CAqBCfBQACgAlJ98h1qO0wAiAOQ1bFInHY44AAwA7tA2CwkFMorIAB7AljwCDuNjU2kMgBGtB4AGtXFI+MFqFAkLcoMDOXwpPcALRSWiJYJ6ACsUQApMSkaDKtQIUobPd4Qicq9aHTjrZaLBgvAUao0W1vjiINRZME2PiEZpNMdgL5ZPAFEgOiAFdRXPBfUpfAgkJpEqRZLBaD4kJzYHw+dGwObXq7LdbbbNtWDqIRhUMRhj+mwAMJ8TNSBHWNjHABKxwA4scAEJI-ZO1sYZI+BAYbl8gVCkUNpvw4lSVychEAEmA7YwVpt8Hm667W6Lu7w697h53JeJFVmwPRFQreuGAgUAEFmoiUcAnfqmrJ4VcPx1dp2n1aFYSDL4oRhHg4WRIDgP1ChOwUHsFF7ABdeEKFIQ14GbKJjnCFUVWOLBwgADiRR5cPwwjiMI2IqINaA8IRAiFCIkiFHQJF0Pgy4zjgp0nSQ7s+3QjBCGlABRHkWARBFSHtNFgFIDABFdd1FC+ZFUSUZw52lBEwJg+AOzEtCkRLeCnVrQzmxMhBzJQvtSwxdF2luNhgikDFfx1WYy1uEVWN-Y431kZE3IqXp+gQKtRlEcI0CQKJZSiVK5gWEA6AYUQMB4UhyF4AQhBEJgR1w9ov3cxNk1TdNMz5ALYoGBLqDGEAsEmGZZnQ2YgA)
+
+Here is the a more compact version : [ChooseColorCompact]([https://flems.io/#0=N4IgtglgJlA2CmIBcA2A7AOgIwE4A0IAZhAgM7IDaoAdgIZiJIgYAWALmLCAQMYD21NvEHIQAHlI8AThAAObAASkpPALwAdEOzazSSAPT6eUahgBWpKPFgQAblIzV4bfQHMW+2lLYBPK7f0wWwBXAAEAJgwABgwAZn0oCFIXIOCMYLAoDEhTC00APjF9SRl5fPVqCrFE2wVoDRBaWVkCioUFKoS7fO4QUmt4HjYIAXImcKQsABYQAF88GnpGZgte-kFhNlF15IVgBXZOPAUoPjBj4NPzhSlhKylj0ltXY7AFWYVVBVSMAFkANQAqgBuCoVHaKMA8CAqBCfBQACgAlJ98h1qO0wAiAOQ1bFInHY44AAwA7tA2CwkFMorIAB7AljwCDuNjU2kMgBGtB4AGtXFI+MFqFAkLcoMDOXwpPcALRSWiJYJ6ACsUQApMSkaDKtQIUobPd4Qicq9aHTjrZaLBgvAUao0W1vjiINRZME2PiEZpNMdgL5ZPAFEgOiAFdRXPBfUpfAgkJpEqRZLBaD4kJzYHw+dGwObXq7LdbbbNtWDqIRhUMRhj+mwAMJ8TNSBHWNjHABKxwA4scAEJI-ZO1sYZI+BAYbl8gVCkUNpvw4lSVychEAEmA7YwVpt8Hm667W6Lu7w697h53JeJFVmwPRFQreuGAgUAEFmoiUcAnfqmrJ4VcPx1dp2n1aFYSDL4oRhHg4WRIDgP1ChOwUHsFF7ABdeEKFIQ14GbKJjnCFUVWOLBwgADiRR5cPwwjiMI2IqINaA8IRAiFCIkiFHQJF0Pgy4zjgp0nSQ7s+3QjBCGlABRHkWARBFSHtNFgFIDABFdd1FC+ZFUSUZw52lBEwJg+AOzEtCkRLeCnVrQzmxMhBzJQvtSwxdF2luNhgikDFfx1WYy1uEVWN-Y431kZE3IqXp+gQKtRlEcI0CQKJZSiVK5gWEA6AYUQMB4UhyF4AQhBEJgR1w9ov3cxNk1TdNMz5ALYoGBLqDGEAsEmGZZnQ2YgA](https://flems.io/#0=N4IgtglgJlA2CmIBcA2A7AOgIwE4A0IAZhAgM7IDaoAdgIZiJIgYAWALmLCAQMYD21NvEHIQAHlI8AThAAObAASkpPALwAdEOzazSSAPT6eUahgBWpKPFgQAblIzV4bfQHMW+2lLYBPK7f0wWwBXAAEAJmwMAAZ9KAhSFyDgjGCwKAxIUwtNAD4xfUkZeVz1ajKxeNsFaA0QWllZPLKFBQq4u1zuEFJreB42CAFyJmikAFYADhAAXzwaekZmC27+QWE2UTXEhWAFdk48BSg+MCPgk7OFKWErKSPSW1cjtlpXUgUZhVUFZIwAWQAagBVADcZW2ij2VSOEGosmCbAeslo1E+3wUr3e4PK1Ehvx4EBUCAxAAoAJTfXJtNHHOykgDkDKOAAMAO7QNgsJAAFmisgAHqCWPAIO42Lz+UKAEa0HgAa1cUj4wWoUCQNygoOlfCkdwAtFJaPFgnpxtEAKQs8k4iHDRQAZRsdzJWSOYFoAqOtlosGC8CONml1gQlNU1OALQUCEUpGd8CkGMuCgpONarVIKOopKDIfgNqjrRjCmsg3hiIxcIRbFJmk0R2Avlk8AUSDaICN1Fc8HrSl8CCQmnimdgtB8SGlsD4Ct7Hq9vzh3t9-pmBdpRecJdgbB9fpbPyqpNLVcRGF3-owbD4DrYMi7FMpUYup1TUbj0ATGESPgQGGHslHHwMU0QgEAFTQ02uZxgikNFI3XdMT0UNtj3LJFC3Tc94BQ7csKjGYygI3FCFVAYhjRXo2AAYT4KcpCPbcjgAJSOABxI4ACFyT2KNSy-ft4AwWUFSVFU1RouiMRZKRXGlUkABJgCYjAkLPZd4DmRTWJUtC1L3TTgA4nTqz0ldyRZQjQRpMoSLxQYBAUABBRoU0peDWnxBpZCTU5XMgjz7QUQliX3AkiR4ElXwQ-EKBYhR2IUDiAF0MQoDDWidD96OiI5wnGcYjiwcJJiOTQmM0ckjhpdN00yu5SRyhQ8oKhQipK1pNFYirSoQjL42y3L8sK4rSpADiKowpLIOfMAoo62lYrYzikowQhdQAUTlFhSVJd87jDCMML2z9VIEJCyQO1p3JqoLwt-b9f2ExVlVVKAJN1KSZLkxTlNUrCDO0v71IMoygf08z-PTY6HCwnSnCkAAVeABUUH5oeM088IQojWlXSC32cd76OCiKAwUOKEq4-HaRuNgYLRLycSIsobjVBNSS8o5nNkB9bWobpegQMjhlEHkUCQaJ9TGaJZnmEA6AYUQMB4UhyF4AQhBEJgv3jK6o3-QCJynBUmYFvpheoEYQCwJAsB5WYkoIBWliJ0g6oTWYgA)https://flems.io/#0=N4IgtglgJlA2CmIBcA2A7AOgIwE4A0IAZhAgM7IDaoAdgIZiJIgYAWALmLCAQMYD21NvEHIQAHlI8AThAAObAASkpPALwAdEOzazSSAPT6eUahgBWpKPFgQAblIzV4bfQHMW+2lLYBPK7f0wWwBXAAEAJmwMAAZ9KAhSFyDgjGCwKAxIUwtNAD4xfUkZeVz1ajKxeNsFaA0QWllZPLKFBQq4u1zuEFJreB42CAFyJmikAFYADhAAXzwaekZmC27+QWE2UTXEhWAFdk48BSg+MCPgk7OFKWErKSPSW1cjtlpXUgUZhVUFZIwAWQAagBVADcZW2ij2VSOEGosmCbAeslo1E+3wUr3e4PK1Ehvx4EBUCAxAAoAJTfXJtNHHOykgDkDKOAAMAO7QNgsJAAFmisgAHqCWPAIO42Lz+UKAEa0HgAa1cUj4wWoUCQNygoOlfCkdwAtFJaPFgnpxtEAKQs8k4iHDRQAZRsdzJWSOYFoAqOtlosGC8CONml1gQlNU1OALQUCEUpGd8CkGMuCgpONarVIKOopKDIfgNqjrRjCmsg3hiIxcIRbFJmk0R2Avlk8AUSDaICN1Fc8HrSl8CCQmnimdgtB8SGlsD4Ct7Hq9vzh3t9-pmBdpRecJdgbB9fpbPyqpNLVcRGF3-owbD4DrYMi7FMpUYup1TUbj0ATGESPgQGGHslHHwMU0QgEAFTQ02uZxgikNFI3XdMT0UNtj3LJFC3Tc94BQ7csKjGYygI3FCFVAYhjRXo2AAYT4KcpCPbcjgAJSOABxI4ACFyT2KNSy-ft4AwWUFSVFU1RouiMRZKRXGlUkABJgCYjAkLPZd4DmRTWJUtC1L3TTgA4nTqz0ldyRZQjQRpMoSLxQYBAUABBRoU0peDWnxBpZCTU5XMgjz7QUQliX3AkiR4ElXwQ-EKBYhR2IUDiAF0MQoDDWidD96OiI5wnGcYjiwcJJiOTQmM0ckjhpdN00yu5SRyhQ8oKhQipK1pNFYirSoQjL42y3L8sK4rSpADiKowpLIOfMAoo62lYrYzikowQhdQAUTlFhSVJd87jDCMML2z9VIEJCyQO1p3JqoLwt-b9f2ExVlVVKAJN1KSZLkxTlNUrCDO0v71IMoygf08z-PTY6HCwnSnCkAAVeABUUH5oeM088IQojWlXSC32cd76OCiKAwUOKEq4-HaRuNgYLRLycSIsobjVBNSS8o5nNkB9bWobpegQMjhlEHkUCQaJ9TGaJZnmEA6AYUQMB4UhyF4AQhBEJgv3jK6o3-QCJynBUmYFvpheoEYQCwJAsB5WYkoIBWliJ0g6oTWYgA)
 
 ```js
-const { html, dom, udom, render, svg, m } = mvu.MVU;
+const { html, dom, udom, render, svg, tags } = mvu.MVU;
+const { div, input, span } = tags;
 
 const mcircle = () => 
-  m('div')('', `width:40px;height:40px;background:red;border-radius:50%`);
+  div('', `width:40px;height:40px;background:red;border-radius:50%`);
 
-const slider = (min, max, value) => 
-  m('input')("", {type : "range", style:"display:block", max, min, value});
+const Slider = (min, max, value, libelle) => {
+  let slider = dom ();
+    span(libelle);
+    let eltinput = input("", {type : "range", style:"display:block", max, min, value});
+    let eltvalue = div(eltinput.value.toString()) 
+  udom();
+  slider.style.display = "flex";
+  return {
+      input : eltinput,
+      value: eltvalue
+  }
+}
 
 function setColor(elt, R, G, B){ 
-  elt.style.backgroundColor = `rgb(${R.value},${G.value},${B.value})`
+  elt.style.backgroundColor = `rgb(${R.input.value},${G.input.value},${B.input.value})`
 }; 
 
 function App () {
   const app = dom ();
     const circle = mcircle ();
-    const [R, G, B] = [slider(0, 255, 128), slider(0, 255, 23), slider(0, 255, 67)];
+    const [R, G, B] = [
+      Slider(0, 255, 128, "R"),  
+      Slider(0, 255, 128,  "G"), 
+      Slider(0, 255, 128, "B")
+    ];
   udom();
   
-  [R, G, B].forEach((s) => {s.oninput = () => setColor(circle, R, G, B)});
+  [R, G, B].forEach((slider) => {
+    slider.input.oninput = () =>  {
+      circle.style.backgroundColor = `rgb(${R.input.value},${G.input.value},${B.input.value})`;
+      slider.value.innerText = slider.input.value
+    }
+  });
   
   setColor(circle, R, G, B);
   
@@ -111,6 +131,7 @@ function App () {
 }
 
 render(app, App());
+
 ```
 
 
